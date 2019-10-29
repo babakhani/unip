@@ -2,8 +2,17 @@
   "name": "unip",
   "version": "0.0.1-alpha",
   "license": "MIT",
+  "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
   "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, VUE JS and react",
+  "repository": "git@github.com:babakhani/unip.git",
+  "homepage": "https://github.com/babakhani/unip",
+  "contributors": [
+    {
+      "name": "Reza Babakhani",
+      "email": "babakhani.reza@gmail.com"
+    }
+  ],
   "keywords": [
     "boilerplate",
     "scaffold",
