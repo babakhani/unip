@@ -1,6 +1,6 @@
 import { writable, readable, derived } from 'svelte/store';
 
-// Readable Ecample
+// Readable Example
 export const time = readable(new Date(), function start(set) {
 	const interval = setInterval(() => {
 		set(new Date());
@@ -11,7 +11,7 @@ export const time = readable(new Date(), function start(set) {
 	};
 });
 
-// Writable Ecample
+// Writable Example
 export const count = writable(0);
 
 // Derived Example

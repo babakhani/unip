@@ -14,13 +14,13 @@ export default {
 		format: 'iife',
     extend: true,
 		name: pkg.name,
-		file: `public/bundle.js`
+		file: `public/[NAME].js`
 	},
 	plugins: [
 		svelte({
 			dev: !production,
 			css: css => {
-				css.write(`public/bundle.css`);
+				css.write(`public/[NAME].css`);
 			}
 		}),
 		resolve({
@@ -31,9 +31,9 @@ export default {
 		!production && rollup_start_dev,
 		!production && livereload('public'),
 		production && terser(),
-    banner('v<%= pkg.name %>'),
-    banner('v<%= pkg.lisence %>'),
     banner('v<%= pkg.version %> by<%= pkg.author %>')
+    banner('<%= pkg.lisence %>'),
+    banner('<%= pkg.name %>'),
 	],
 	watch: {
 		clearScreen: false

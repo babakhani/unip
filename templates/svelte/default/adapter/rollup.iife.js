@@ -27,9 +27,9 @@ export default {
 		}),
 		commonjs(),
 		production && terser(),
-    banner('v<%= pkg.name %>'),
-    banner('v<%= pkg.lisence %>'),
     banner('v<%= pkg.version %> by<%= pkg.author %>')
+    banner('<%= pkg.lisence %>'),
+    banner('<%= pkg.name %>'),
 	],
 	watch: {
 		clearScreen: false
