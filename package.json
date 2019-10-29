@@ -1,0 +1,35 @@
+{
+  "name": "unip",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Reza Babakhani <babakhani.reza@gmail.com>",
+  "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, VUE JS and react",
+  "keywords": [
+    "boilerplate",
+    "scaffold",
+    "svelte",
+    "universal",
+    "vue",
+    "react", 
+    "pure",
+    "js",
+    "vanilla"
+  ],
+  "homepage": "",
+  "url": "",
+  "man": "./doc.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/cli.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "unip": "index.js"
+  },
+  "dependencies": {
+    "caporal": "^0.3.0",
+    "colors": "^1.1.2",
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.7"
+  }
+}

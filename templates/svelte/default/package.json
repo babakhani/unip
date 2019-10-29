@@ -1,0 +1,37 @@
+{
+  "name": "[NAME]",
+  "description": "[DESCRIPTION]",
+  "version": "[VERSION]",
+  "license": "[LICENSE]",
+  "author": "[AUTHOR]",
+  "devDependencies": {
+    "kill-port": "^1.6.0",
+    "rollup": "^1.12.0",
+    "rollup-plugin-banner": "^0.2.1",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-execute": "^1.1.1",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-run": "^1.1.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.4",
+    "svelte-adapter": "^0.3.0"
+  },
+  "scripts": {
+    "clear": "kill-port --port [DEV-PORT],[IIFE-PORT],[VUE-PORT],[REACT-PORT]",
+    "build": "rollup -c",
+    "dev": "rollup -c ./rollup.config.js  -w",
+    "vue": "rollup -c ./adapter/rollup.vue.js -w & cd ./demo/vue; npm run serve; cd ../../",
+    "iife": "rollup -c ./adapter/rollup.iife.js -w & ln -f public/[NAME]-iife.js ./demo/js/[NAME]-iife.js & ln -f public/[NAME].css ./demo/js/[NAME].css & cd ./demo/js ; http-server ./ -p [IIFE-PORT] & cd ../../ ; ",
+    "react": "rollup -c ./adapter/rollup.react.js -w & ln -f public/[NAME]-react.js ./demo/react-demo/src/[NAME]-react.js & npm run runreactserver",
+    "runreactserver": "cd ./demo/react-demo ; npm start & cd ../../",
+    "start": "sirv public --single --port [DEV-PORT]",
+    "start:dev": "sirv public --single --dev --port [DEV-PORT]"
+  }
+}
