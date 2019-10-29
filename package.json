@@ -5,7 +5,10 @@
   "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
   "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, VUE JS and react",
-  "repository": "git@github.com:babakhani/unip.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/cli.git"
+  },
   "homepage": "https://github.com/babakhani/unip",
   "contributors": [
     {
@@ -19,17 +22,12 @@
     "svelte",
     "universal",
     "vue",
-    "react", 
+    "react",
     "pure",
     "js",
     "vanilla"
   ],
-  "homepage": "",
   "url": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/npm/cli.git"
-  },
   "main": "index.js",
   "bin": {
     "unip": "index.js"
