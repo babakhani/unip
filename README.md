@@ -3,6 +3,8 @@ UNIP
 
 Universal plugin scaffold
 
+[![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
+
 ## Install
 
 ```
