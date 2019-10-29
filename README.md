@@ -5,8 +5,6 @@ Universal plugin scaffold
 
 ## Install
 
-> Note: Currently doesn't work, install from contribute section
-
 ```
 npm install -g unip
 
