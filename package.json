@@ -1,6 +1,6 @@
 {
   "name": "unip",
-  "version": "1.0.0",
+  "version": "0.0.1-alpha",
   "license": "MIT",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
   "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, VUE JS and react",
