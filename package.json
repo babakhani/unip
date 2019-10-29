@@ -1,6 +1,6 @@
 {
   "name": "unip",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.3",
   "license": "MIT",
   "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
@@ -26,7 +26,6 @@
   ],
   "homepage": "",
   "url": "",
-  "man": "./docs/doc.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/npm/cli.git"
