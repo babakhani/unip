@@ -3,7 +3,7 @@ UNIP
 
 Universal plugin scaffold
 
-### Install
+## Install
 
 ```
 npm install -g unip
@@ -11,7 +11,7 @@ npm install -g unip
 yarn global add unip
 ```
 
-### Usage
+## Usage
 
 ```
 unip create svelte
@@ -66,3 +66,19 @@ npm run react
 ```
 npm run react 
 ```
+
+## Contribute
+
+
+```
+git clone git@github.com:babakhani/unip.git
+
+cd unip
+
+npm link
+
+unip --help
+
+```
+
+
