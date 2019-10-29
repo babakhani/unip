@@ -16,6 +16,10 @@ yarn global add unip
 ## Usage
 
 ```
+mkdir awesome-plugin
+
+cd awesome-plugin
+
 unip create svelte
 ```
 
