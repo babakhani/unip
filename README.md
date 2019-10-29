@@ -3,6 +3,9 @@ UNIP
 
 Universal plugin scaffold
 
+Create universal plugin with single code base for pure javascript, vue and
+react
+
 [![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
 
 ## Install
@@ -84,7 +87,6 @@ cd unip
 npm link
 
 unip --help
-
 ```
 
 
