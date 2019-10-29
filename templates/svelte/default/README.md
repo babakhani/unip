@@ -1,4 +1,4 @@
-Awesome UNIP plugin [VERSION]
+[NAME] v[VERSION]
 ==============
 
 [DESCRIPTION]
