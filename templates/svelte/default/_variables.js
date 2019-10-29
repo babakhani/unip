@@ -43,6 +43,19 @@ module.exports = [
   {
     'name': 'react-port',
     'default': '8003'
+  },
+  {
+    'name': 'email',
+    'default': 'babakhani.reza@gmail.com'
+  },
+  {
+    'name': 'npm_publish_key',
+    'default': ''
+  },
+  {
+    'name': 'repository',
+    'default': ''
   }
+
 ];
 

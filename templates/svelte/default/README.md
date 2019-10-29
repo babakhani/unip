@@ -10,7 +10,9 @@
 ## Install
 
 ```
-npm install [NAME]
+npm install [NAME] --save
+
+yarn add [NAME] -S
 ```
 
 ## Usage
