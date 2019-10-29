@@ -1,6 +1,6 @@
 {
   "name": "unip",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha-3",
   "license": "MIT",
   "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
