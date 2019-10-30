@@ -1,6 +1,7 @@
 const prompt = require('prompt');
 const shell = require('shelljs');
 const fs = require('fs');
+const pkg = require('./package.json');
 const colors = require("colors/safe");
 const snakeToCamel = (str) => str.replace(
     /([-_][a-z])/g,
@@ -8,26 +9,14 @@ const snakeToCamel = (str) => str.replace(
                     .replace('-', '')
                     .replace('_', '')
 );
-
-// Set prompt as green
-prompt.message = colors.green("Replace");
-
-/*
- * Command function
- */
-
+prompt.message = colors.blue("Config");
 module.exports = (args, options, logger) => {
+  logger.info(colors.green(`UNIP v${pkg.version}`));
   const variant = options.variant || 'default';
   const templatePath = `${__dirname}/templates/${args.template}/${variant}`;
-
   shell.mkdir(`./${args.name}`)
   shell.cd(`./${args.name}`)
   const localPath = process.cwd();
-
-  /*
-   * Copy Template
-   */
-
   if (fs.existsSync(templatePath)) {
     logger.info('Copying files…');
     shell.cp('-R', `${templatePath}/*`, localPath);
@@ -36,27 +25,14 @@ module.exports = (args, options, logger) => {
     logger.error(`The requested template for ${args.template} wasn’t found.`)
     process.exit(1);
   }
-
-  /*
-   * File variables
-   */
-
   const variables = require(`${templatePath}/_variables`);
-
-  // Remove variables file from the current directory
-  // since it only is needed on the template directory
   if (fs.existsSync(`${localPath}/_variables.js`)) {
     shell.rm(`${localPath}/_variables.js`);
   }
-
   logger.info('Please fill the following values…');
-
-  // Ask for variable values
   prompt.start().get(variables, (err, result) => {
-    // Replace variable values in all files
     shell.ls('-Rl', '.').forEach(entry => {
       if (entry.isFile()) {
-        // Replace '[VARIABLE]` with the corresponding variable value from the prompt
         variables.forEach(variable => {
           var pattern = new RegExp(`\\[${variable.name.toUpperCase()}\\]`, "ig")
           shell.sed('-i', pattern, result[variable.name], entry.name);
@@ -77,7 +53,7 @@ module.exports = (args, options, logger) => {
         logger.info('npm run esm')
         logger.info('npm run vue')
         logger.info('npm run react')
-        logger.info('✔ Success!');
+        logger.info(colors.green("✔ Success!"));
     });
   });
 }
