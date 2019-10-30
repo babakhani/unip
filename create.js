@@ -19,7 +19,10 @@ module.exports = (args, options, logger) => {
   const localPath = process.cwd();
   if (fs.existsSync(templatePath)) {
     logger.info('Copying files…');
-    shell.cp('-R', `${templatePath}/*`, localPath);
+    console.log('localPath : ' + localPath)
+    console.log('templatePath : ' + templatePath)
+    shell.cp('-R', `${templatePath}/.*`, `${localPath}/`);
+    shell.cp('-R', `${templatePath}/*`, `${localPath}/`);
     logger.info('✔ The files have been copied!');
   } else {
     logger.error(`The requested template for ${args.template} wasn’t found.`)
