@@ -1,11 +1,13 @@
 <p align="center">
   <a href="https://github.com/babakhani/unip" target="_blank">
-    <img width="180" src="https://raw.githubusercontent.com/babakhani/unip/master/logo.png" alt="logo">
+    <img width="180" src="https://raw.githubusercontent.com/babakhani/unip/master/logo.png" alt="UNIP">
   </a>
 </p>
-
-<h2 align="center">UNIP</h2>
 <h4 align="center">Universal plugin scaffold</h4>
+
+
+UNIP
+==================
 
 Create universal plugin with single code base for pure JavaScript, Svelte, Vue.js and React
 
