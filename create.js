@@ -19,8 +19,6 @@ module.exports = (args, options, logger) => {
   const localPath = process.cwd();
   if (fs.existsSync(templatePath)) {
     logger.info('Copying files…');
-    console.log('localPath : ' + localPath)
-    console.log('templatePath : ' + templatePath)
     shell.cp('-R', `${templatePath}/.*`, `${localPath}/`);
     shell.cp('-R', `${templatePath}/*`, `${localPath}/`);
     logger.info('✔ The files have been copied!');
@@ -46,6 +44,8 @@ module.exports = (args, options, logger) => {
     });
     logger.info('Init git');
     shell.exec('git init')
+    shell.exec('git add .')
+    shell.exec('git commit -m "init"')
     logger.info('Install Packages (npm install)');
     shell.exec('npm install --verbose', function () {
         logger.info('Install React Packages (npm install)');
