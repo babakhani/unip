@@ -25,6 +25,10 @@ yarn global add unip
 
 ```
 unip create svelte my-awesome-plugin
+
+cd my-awesome-plugin
+
+npm run dev
 ```
 
 Complete details and create new project
@@ -86,4 +90,5 @@ npm link
 unip --help
 ```
 
-
+## license
+Freely distributable under the terms of the [MIT](https://opensource.org/licenses/MIT) license. 
