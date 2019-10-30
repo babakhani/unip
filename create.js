@@ -1,4 +1,3 @@
-
 const prompt = require('prompt');
 const shell = require('shelljs');
 const fs = require('fs');
@@ -20,6 +19,9 @@ prompt.message = colors.green("Replace");
 module.exports = (args, options, logger) => {
   const variant = options.variant || 'default';
   const templatePath = `${__dirname}/templates/${args.template}/${variant}`;
+
+  shell.mkdir(`./${args.name}`)
+  shell.cd(`./${args.name}`)
   const localPath = process.cwd();
 
   /*

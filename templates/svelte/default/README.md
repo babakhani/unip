@@ -105,9 +105,7 @@ npm run iife
 #### Install vue demo application packages 
 
 ```
-cd ./demo/vue/
-
-npm install
+npm run install-vue-demo
 ```
 
 #### Start vue dev server
@@ -119,9 +117,7 @@ npm run vue
 #### Install react demo application packages 
 
 ```
-cd ./demo/react-demo/
-
-npm install
+npm run install-react-demo
 ```
 
 #### Start react dev server

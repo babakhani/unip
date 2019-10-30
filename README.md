@@ -19,11 +19,7 @@ yarn global add unip
 ## Usage
 
 ```
-mkdir awesome-plugin
-
-cd awesome-plugin
-
-unip create svelte
+unip create svelte my-awesome-plugin
 ```
 
 Complete details and create new project
@@ -45,9 +41,7 @@ npm run iife
 #### Install vue demo application packages 
 
 ```
-cd ./demo/vue/
-
-npm install
+npm run install-vue-demo
 ```
 
 #### Start vue dev server
@@ -59,9 +53,7 @@ npm run vue
 #### Install react demo application packages 
 
 ```
-cd ./demo/react-demo/
-
-npm install
+npm run install-react-demo
 ```
 
 #### Start react dev server
