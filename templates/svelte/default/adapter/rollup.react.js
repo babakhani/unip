@@ -28,9 +28,13 @@ export default {
 		}),
 		commonjs(),
 		production && terser(),
-    banner('v<%= pkg.version %> by<%= pkg.author %>')
-    banner('<%= pkg.lisence %>'),
-    banner('<%= pkg.name %>'),
+    banner(`
+<%= pkg.name %>
+v<%= pkg.version %>
+<%= pkg.author %>
+license <%= pkg.license %>
+<%= pkg.homepage %>
+    `),
     cleanup()
 	],
 	watch: {

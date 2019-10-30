@@ -55,6 +55,10 @@ module.exports = [
   {
     'name': 'repository',
     'default': ''
+  },
+  {
+    'name': 'home',
+    'default': ''
   }
 
 ];

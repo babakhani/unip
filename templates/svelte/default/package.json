@@ -4,6 +4,7 @@
   "version": "[VERSION]",
   "license": "[LICENSE]",
   "author": "[AUTHOR]",
+  "homepage": "[HOME]",
   "devDependencies": {
     "kill-port": "^1.6.0",
     "rollup": "^1.12.0",
@@ -27,9 +28,9 @@
     "dev": "rollup -c ./rollup.config.js  -w",
     "install-vue-demo": "cd ./demo/vue; npm install; cd ../../",
     "vue": "rollup -c ./adapter/rollup.vue.js -w & cd ./demo/vue; npm run serve; cd ../../",
-    "iife": "rollup -c ./adapter/rollup.iife.js -w & ln -f public/[NAME]-iife.js ./demo/js/[NAME]-iife.js & ln -f public/[NAME].css ./demo/js/[NAME].css & cd ./demo/js ; http-server ./ -p [IIFE-PORT] & cd ../../ ; ",
+    "iife": "rollup -c ./adapter/rollup.iife.js ; rollup -c ./adapter/rollup.iife.js -w & ln -f public/[NAME]-iife.js ./demo/js/[NAME]-iife.js ; ln -f public/[NAME].css ./demo/js/[NAME].css ; sirv ./demo/js --single --dev --port [IIFE-PORT] ; ",
     "install-react-demo": "cd ./demo/react-demo; npm install; cd ../../",
-    "react": "rollup -c ./adapter/rollup.react.js -w & ln -f public/[NAME]-react.js ./demo/react-demo/src/[NAME]-react.js & npm run runreactserver",
+    "react": "rollup -c ./adapter/rollup.react.jsw & ln -f public/[NAME]-react.js ./demo/react-demo/src/[NAME]-react.js & npm run runreactserver",
     "runreactserver": "cd ./demo/react-demo ; npm start & cd ../../",
     "start": "sirv public --single --port [DEV-PORT]",
     "start:dev": "sirv public --single --dev --port [DEV-PORT]"

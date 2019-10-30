@@ -29,7 +29,7 @@ yarn add [NAME] -S
       console.log('onSampleEvent passed from applicaiton')
     }
   }
-  console.log([NAME_SANITIZED](container, options))
+  [NAME_SANITIZED](container, options)
 </script>
 ```
 

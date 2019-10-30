@@ -3,7 +3,7 @@ UNIP
 
 Universal plugin scaffold
 
-Create universal plugin with single code base for pure javascript, Svelte, Vue.js and React
+Create universal plugin with single code base for pure JavaScript, Svelte, Vue.js and React
 
 [![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
 
