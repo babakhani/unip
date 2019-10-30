@@ -5,7 +5,9 @@
 </p>
 <h4 align="center">Universal plugin scaffold</h4>
 
+<p align="center" >
 [![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
+</p>
 
 UNIP
 ==================
