@@ -129,6 +129,6 @@ npm run react
 #### Kill node process on ports
 
 ```
-npm run react 
+npm run clear 
 ```
 

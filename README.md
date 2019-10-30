@@ -62,10 +62,10 @@ npm run install-react-demo
 npm run react 
 ```
 
-#### Kill node process on ports
+#### Kill node process on demo ports
 
 ```
-npm run react 
+npm run clear 
 ```
 
 ## Contribute
