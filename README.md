@@ -12,6 +12,12 @@ Create universal plugin with single code base for pure JavaScript, Svelte, Vue.j
 Unip help you start new plugin project that going to work in different
 JavaScript framework, currently we support Vue.js, React, pure JavaScript (IIFE) and also Svelte.
 
+## Features
+- Use svelte power to create plugin that going to work every where
+- Example for every thing you need to create your plugin
+- Pre defined Vue.js React adapter
+- vuepress static site generated for documentation
+- CI/CD with Travis
 
 ## Install
 
