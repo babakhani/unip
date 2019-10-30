@@ -5,13 +5,13 @@
 </p>
 <h4 align="center">Universal plugin scaffold</h4>
 
+[![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
 
 UNIP
 ==================
 
 Create universal plugin with single code base for pure JavaScript, Svelte, Vue.js and React
 
-[![npm version](https://badge.fury.io/js/unip.svg)](https://badge.fury.io/js/unip)
 
 ### What's Unip?
 
