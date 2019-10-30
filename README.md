@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/babakhani/unip" target="_blank">
-    <img width="180" src="https://raw.githubusercontent.com/babakhani/unip/master/logo.svg" alt="logo">
+    <img width="180" src="https://raw.githubusercontent.com/babakhani/unip/master/logo.png" alt="logo">
   </a>
 </p>
 
