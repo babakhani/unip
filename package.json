@@ -4,7 +4,7 @@
   "license": "MIT",
   "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
-  "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, VUE JS and react",
+  "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, Vue.js and React",
   "repository": {
     "type": "git",
     "url": "https://github.com/npm/cli.git"
@@ -21,13 +21,14 @@
     "scaffold",
     "svelte",
     "universal",
+    "javascript universal plugin",
     "vue",
     "react",
     "pure",
     "js",
     "vanilla"
   ],
-  "url": "",
+  "url": "https://github.com/babakhani/unip",
   "main": "index.js",
   "bin": {
     "unip": "index.js"
