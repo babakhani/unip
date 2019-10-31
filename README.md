@@ -45,15 +45,13 @@ cd my-awesome-plugin
 npm run dev
 ```
 
-Complete details and create new project
-
 #### Start svelte dev server
 
 ```
 npm run dev 
 ```
 
-#### Start Pure javascript dev server
+#### Start Pure JavaScript dev server
 
 [What is IIFE?](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 
