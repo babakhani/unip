@@ -51,4 +51,13 @@
   <button on:click={countable.decrement}>-</button>
   <button on:click={countable.reset}>reset</button>
 </div>
+<style lang="scss">
+	@import "./theme.scss";
+	.plugvelte-container {
+		color: $primarycolor;
+		& .child {
+          color: blue;
+		}
+	}
+</style>
 

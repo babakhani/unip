@@ -5,6 +5,15 @@ import { terser } from 'rollup-plugin-terser'
 import banner from 'rollup-plugin-banner'
 import cleanup from 'rollup-plugin-cleanup'
 import pkg from '../package.json'
+import sveltePreprocess from 'svelte-preprocess'
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ['src'],
+  },
+  postcss: {
+    plugins: [require('autoprefixer')],
+  }
+});
 const production = !process.env.ROLLUP_WATCH;
 export default {
 	input: 'adapter/plugin-react.js',
@@ -18,6 +27,7 @@ export default {
 	plugins: [
 		svelte({
 			dev: !production,
+      preprocess,
 			css: css => {
 				css.write(`public/[NAME].css`);
 			}
