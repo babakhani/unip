@@ -38,5 +38,33 @@
     "colors": "^1.1.2",
     "prompt": "^1.0.0",
     "shelljs": "^0.7.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-spellcheck": "0.0.14",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2",
+    "prettier-plugin-svelte": "^0.7.0",
+    "svelte": "^3.12.1"
+  },
+  "scripts": {
+    "lint": "npm run eslint",
+    "lint:fix": "npm run prettier:fix; npm run eslint:fix",
+    "eslint": "eslint **/*.{js,vue,svelte}",
+    "eslint:fix": "eslint **/*.{js,vue,svelte} --fix",
+    "prettier": "prettier **/*.{js,vue,svelte} --list-different",
+    "prettier:fix": "prettier -c .prettierrc **/*.{js,vue,svelte} --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

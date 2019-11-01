@@ -3,3 +3,4 @@ npm_debug.log
 .DS_Store
 .vscode/
 *.swp
+package-lock.json

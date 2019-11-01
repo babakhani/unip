@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 import banner from 'rollup-plugin-banner'
 import cleanup from 'rollup-plugin-cleanup'
+// eslint-disable-next-line no-unused-vars
 import pkg from '../package.json'
 import sveltePreprocess from 'svelte-preprocess'
 const preprocess = sveltePreprocess({
@@ -12,32 +13,33 @@ const preprocess = sveltePreprocess({
   },
   postcss: {
     plugins: [require('autoprefixer')],
-  }
-});
-const production = !process.env.ROLLUP_WATCH;
+  },
+})
+const production = !process.env.ROLLUP_WATCH
 export default {
-	input: 'adapter/plugin-react.js',
-	output: {
-		sourcemap: true,
-		format: 'esm',
+  input: 'adapter/plugin-react.js',
+  output: {
+    sourcemap: true,
+    format: 'esm',
     extend: true,
-		name: pkg.name,
-		file: `public/[NAME]-react.js`
-	},
-	plugins: [
-		svelte({
-			dev: !production,
+    name: pkg.name,
+    file: `public/[NAME]-react.js`,
+  },
+  plugins: [
+    svelte({
+      dev: !production,
       preprocess,
-			css: css => {
-				css.write(`public/[NAME].css`);
-			}
-		}),
-		resolve({
-			browser: true,
-			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
-		}),
-		commonjs(),
-		production && terser(),
+      css: css => {
+        css.write(`public/[NAME].css`)
+      },
+    }),
+    resolve({
+      browser: true,
+      dedupe: importee =>
+        importee === 'svelte' || importee.startsWith('svelte/'),
+    }),
+    commonjs(),
+    production && terser(),
     banner(`
 <%= pkg.name %>
 v<%= pkg.version %>
@@ -45,9 +47,9 @@ v<%= pkg.version %>
 license <%= pkg.license %>
 <%= pkg.homepage %>
     `),
-    cleanup()
-	],
-	watch: {
-		clearScreen: false
-	}
-};
+    cleanup(),
+  ],
+  watch: {
+    clearScreen: false,
+  },
+}
