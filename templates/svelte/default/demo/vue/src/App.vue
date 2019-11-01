@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./logo.png">
-    <SveltePlugin 
-    @onSampleEvent="handleClick" 
-    @onSampleEventOver="handleOver" 
-    :options="{
-       sampleConfig: 'passed from vue js'
-    }" />
+    <img
+      alt="Vue logo"
+      src="./logo.png"
+    />
+    <SveltePlugin
+      :options="{
+        sampleConfig: 'passed from vue js',
+      }"
+      @onSampleEvent="handleClick"
+      @onSampleEventOver="handleOver"
+    />
   </div>
 </template>
 <script>
 import SveltePlugin from '../../../public/[NAME]-vue.js'
+// eslint-disable-next-line no-unused-vars
 import styles from '../../../public/awesome-unip.css'
 export default {
-  name: 'app',
-  components: { SveltePlugin},
+  name: 'App',
+  components: { SveltePlugin },
   methods: {
-    handleOver () {
+    handleOver() {
       console.log('Vue handle mouse over vue js')
     },
-    handleClick () {
+    handleClick() {
       alert('alert from vue js')
-    }
-  }
+    },
+  },
 }
 </script>
 
