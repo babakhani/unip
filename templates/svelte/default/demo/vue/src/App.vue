@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./logo.png">
     <SveltePlugin 
     @onSampleEvent="handleClick" 
     @onSampleEventOver="handleOver" 
@@ -11,6 +11,7 @@
 </template>
 <script>
 import SveltePlugin from '../../../public/[NAME]-vue.js'
+import styles from '../../../public/awesome-unip.css'
 export default {
   name: 'app',
   components: { SveltePlugin},
@@ -27,7 +28,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

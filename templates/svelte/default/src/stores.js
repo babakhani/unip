@@ -25,6 +25,7 @@ export const elapsed = derived(
 export const countable = function () {
 	const { subscribe, set, update } = writable(0);
 	return {
+		set: (input) => update(n => input),
 		subscribe,
 		increment: () => update(n => n + 1),
 		decrement: () => update(n => n - 1),
