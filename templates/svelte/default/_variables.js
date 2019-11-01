@@ -6,60 +6,59 @@
  * template files
  */
 
-module.exports = [ 
+module.exports = [
   {
-    'name': 'name',
-    'description': 'This name will be use in package name, and JavaScript plugin name',
-    'default': 'awesome-unip'
+    name: 'name',
+    description:
+      'This name will be use in package name, and JavaScript plugin name',
+    default: 'awesome-unip',
   },
   {
-    'name': 'version',
-    'default': '0.0.1'
+    name: 'version',
+    default: '0.0.1',
   },
   {
-    'name': 'description',
-    'default': 'My Awesome unip plugin, created with unip'
+    name: 'description',
+    default: 'My Awesome unip plugin, created with unip',
   },
   {
-    'name': 'author',
-    'default': 'babakhani.reza@gmail.com'
+    name: 'author',
+    default: 'babakhani.reza@gmail.com',
   },
   {
-    'name': 'license',
-    'default': 'MIT'
+    name: 'license',
+    default: 'MIT',
   },
   {
-    'name': 'dev-port',
-    'default': '8000'
+    name: 'dev-port',
+    default: '8000',
   },
   {
-    'name': 'iife-port',
-    'default': '8001'
+    name: 'iife-port',
+    default: '8001',
   },
   {
-    'name': 'vue-port',
-    'default': '8002'
+    name: 'vue-port',
+    default: '8002',
   },
   {
-    'name': 'react-port',
-    'default': '8003'
+    name: 'react-port',
+    default: '8003',
   },
   {
-    'name': 'email',
-    'default': 'babakhani.reza@gmail.com'
+    name: 'email',
+    default: 'babakhani.reza@gmail.com',
   },
   {
-    'name': 'npm_publish_key',
-    'default': ''
+    name: 'npm_publish_key',
+    default: '',
   },
   {
-    'name': 'repository',
-    'default': ''
+    name: 'repository',
+    default: '',
   },
   {
-    'name': 'home',
-    'default': ''
-  }
-
-];
-
+    name: 'home',
+    default: '',
+  },
+]

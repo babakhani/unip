@@ -6,10 +6,16 @@ const image = pkg.logo
 
 module.exports = {
   base: '/docs/',
-	dest: './docs/dist',
-	title: title,
-	head: [
-    ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/css?family=Roboto:200,300,400` }],
+  dest: './docs/dist',
+  title: title,
+  head: [
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: `https://fonts.googleapis.com/css?family=Roboto:200,300,400`,
+      },
+    ],
     ['link', { rel: 'icon', href: `/favicon.png` }],
     ['meta', { name: 'theme-color', content: `green` }],
     ['format-detection', { content: 'telephone=no' }],
@@ -29,28 +35,28 @@ module.exports = {
     ['meta', { name: 'og:image:secure_url', content: image }],
     ['meta', { name: 'og:width', content: 200 }],
     ['meta', { name: 'og:height', content: 200 }],
-    ['meta', { name: 'og:type', content: 'image/png'}],
-    ['meta', { name: 'twitter:card', content: 'summary'}],
-    ['meta', { name: 'twitter:site', content: `@${pkg.name}`}],
+    ['meta', { name: 'og:type', content: 'image/png' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:site', content: `@${pkg.name}` }],
     ['meta', { name: 'twitter:title', content: title }],
     ['meta', { name: 'twitter:description', content: description }],
     ['meta', { name: 'twitter:image', content: image }],
-    ['link', { name: 'canonical', content: url }]
-	],
-	description: description,
-	themeConfig: {
-		repo: pkg.repository,
-		editLinks: true,
-		editLinkText: 'Help us improve this page!',
-		lastUpdated: `v${pkg.version}`,
+    ['link', { name: 'canonical', content: url }],
+  ],
+  description: description,
+  themeConfig: {
+    repo: pkg.repository,
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    lastUpdated: `v${pkg.version}`,
     logo: image,
     sidebar: [
       ['/getting-started', 'Getting Started'],
       ['/document', 'Document'],
       ['/example', 'Examples'],
       ['/changes', 'Changes'],
-      ['/contributing', 'Contribution']
+      ['/contributing', 'Contribution'],
     ],
-		docsDir: 'docs'
-	}
+    docsDir: 'docs',
+  },
 }

@@ -1,27 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <SveltePlugin 
-    @onSampleEvent="handleClick" 
-    @onSampleEventOver="handleOver" 
-    :options="{
-       sampleConfig: 'passed from vue js'
-    }" />
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+    />
+    <SveltePlugin
+      :options="{
+        sampleConfig: 'passed from vue js',
+      }"
+      @onSampleEvent="handleClick"
+      @onSampleEventOver="handleOver"
+    />
   </div>
 </template>
 <script>
 import SveltePlugin from '../../../public/[NAME]-vue.js'
 export default {
-  name: 'app',
-  components: { SveltePlugin},
+  name: 'App',
+  components: { SveltePlugin },
   methods: {
-    handleOver () {
+    handleOver() {
       console.log('Vue handle mouse over vue js')
     },
-    handleClick () {
+    handleClick() {
       alert('alert from vue js')
-    }
-  }
+    },
+  },
 }
 </script>
 

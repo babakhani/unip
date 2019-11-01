@@ -13,13 +13,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "rules": {
-       "no-unused-expressions": 0,
-       "@typescript-eslint/no-non-null-assertion": 0
-    },
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
