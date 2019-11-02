@@ -21,7 +21,7 @@ export default {
     sourcemap: false,
     format: 'iife',
     extend: true,
-    name: '[NAME_SANITIZED]',
+    name: '<%-NAME_SANITIZED>',
     file: `public/<%-NAME>-iife.js`,
   },
   plugins: [

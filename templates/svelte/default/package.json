@@ -38,7 +38,7 @@
     "svelte-adapter": "https://github.com/babakhani/svelte-adapter"
   },
   "scripts": {
-    "clear": "kill-port --port <%-DEV-PORT>,<%-IIFE-PORT>,<%-VUE-PORT>,<%-REACT-PORT>",
+    "clear": "kill-port --port <%-DEV_PORT>,<%-IIFE_PORT>,<%-VUE_PORT>,<%-REACT_PORT>",
     "svelte:build": "rollup -c",
     "build": "npm-run-all -p svelte:build vue:build react:build iife:build",
     "dev": "rollup -c ./rollup.config.js  -w",
@@ -55,11 +55,11 @@
     "react": "npm-run-all react:build -p react:dev react:aliases react:serve",
     "iife:build": "rollup -c ./adapter/rollup.iife.js",
     "iife:dev": "rollup -c ./adapter/rollup.iife.js -w",
-    "iife:serve": "sirv ./demo/js --single --dev --port <%-IIFE-PORT>",
+    "iife:serve": "sirv ./demo/js --single --dev --port <%-IIFE_PORT>",
     "iife:aliases": "ln -f public/<%-NAME>-iife.js ./demo/js/<%-NAME>-iife.js ; ln -f public/<%-NAME>.css ./demo/js/<%-NAME>.css",
     "iife": "npm-run-all iife:build -p iife:dev iife:aliases iife:serve",
-    "start": "sirv public --single --port <%-DEV-PORT>",
-    "start:dev": "sirv public --single --dev --port <%-DEV-PORT>",
+    "start": "sirv public --single --port <%-DEV_PORT>",
+    "start:dev": "sirv public --single --dev --port <%-DEV_PORT>",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "prettier": "prettier **/*.{js,vue,svelte} --list-different",

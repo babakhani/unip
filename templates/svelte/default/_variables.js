@@ -30,19 +30,19 @@ module.exports = [
     default: 'MIT',
   },
   {
-    name: 'dev-port',
+    name: 'dev_port',
     default: '8000',
   },
   {
-    name: 'iife-port',
+    name: 'iife_port',
     default: '8001',
   },
   {
-    name: 'vue-port',
+    name: 'vue_port',
     default: '8002',
   },
   {
-    name: 'react-port',
+    name: 'react_port',
     default: '8003',
   },
   {
@@ -50,7 +50,7 @@ module.exports = [
     default: 'babakhani.reza@gmail.com',
   },
   {
-    name: 'npm_publish_key',
+    name: 'npm_publish-key',
     default: '',
   },
   {
