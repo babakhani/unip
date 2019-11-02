@@ -22,14 +22,14 @@ export default {
     format: 'iife',
     extend: true,
     name: '[NAME_SANITIZED]',
-    file: `public/[NAME]-iife.js`,
+    file: `public/<%-NAME>-iife.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`public/[NAME].css`)
+        css.write(`public/<%-NAME>.css`)
       },
     }),
     resolve({

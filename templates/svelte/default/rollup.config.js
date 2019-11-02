@@ -23,14 +23,14 @@ export default {
     format: 'iife',
     extend: true,
     name: pkg.name,
-    file: `public/[NAME].js`,
+    file: `public/<%-NAME>.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`public/[NAME].css`)
+        css.write(`public/<%-NAME>.css`)
       },
     }),
     resolve({

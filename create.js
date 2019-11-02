@@ -36,10 +36,10 @@ module.exports = (args, options, logger) => {
     shell.ls('-Rl', '.').forEach(entry => {
       if (entry.isFile()) {
         variables.forEach(variable => {
-          var pattern = new RegExp(`\\[${variable.name.toUpperCase()}\\]`, 'ig')
+          var pattern = new RegExp(`<%-${variable.name.toUpperCase()}>`, 'ig')
           shell.sed('-i', pattern, result[variable.name], entry.name)
           var patternSanitize = new RegExp(
-            `\\[${variable.name.toUpperCase()}_SANITIZED\\]`,
+            `<%-${variable.name.toUpperCase()}_SANITIZED>`,
             'ig'
           )
           shell.sed(

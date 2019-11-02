@@ -1,1 +1,1 @@
-# [NAME] Document 
+# <%-NAME> Document 

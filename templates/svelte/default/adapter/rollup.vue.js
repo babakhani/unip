@@ -22,14 +22,14 @@ export default {
     format: 'esm',
     extend: true,
     name: pkg.name,
-    file: `public/[NAME]-vue.js`,
+    file: `public/<%-NAME>-vue.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`public/[NAME].css`)
+        css.write(`public/<%-NAME>.css`)
       },
     }),
     resolve({

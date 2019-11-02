@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import SveltePlugin from '../../../public/[NAME]-vue.js'
+import SveltePlugin from '../../../public/<%-NAME>-vue.js'
 // eslint-disable-next-line no-unused-vars
 import styles from '../../../public/awesome-unip.css'
 export default {

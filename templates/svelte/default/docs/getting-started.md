@@ -1,7 +1,7 @@
-[NAME] v[VERSION]
+<%-NAME> v<%-VERSION>
 ==============
 
-[DESCRIPTION]
+<%-DESCRIPTION>
 
 - [Documents]()
 - [Example/Demo]()
@@ -10,9 +10,9 @@
 ## Install
 
 ```
-npm install [NAME] --save
+npm install <%-NAME> --save
 
-yarn add [NAME] -S
+yarn add <%-NAME> -S
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ yarn add [NAME] -S
   </div>
 </template>
 <script>
-import SveltePlugin from '../../../public/[NAME]-vue.js'
+import SveltePlugin from '../../../public/<%-NAME>-vue.js'
 export default {
   name: 'app',
   components: { SveltePlugin},
@@ -70,7 +70,7 @@ export default {
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SveltePlugin from './[NAME]-react.js'
+import SveltePlugin from './<%-NAME>-react.js'
 function App() {
   const handleClick = () => alert('alert from react')
   return (

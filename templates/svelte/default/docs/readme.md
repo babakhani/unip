@@ -1,8 +1,8 @@
 ---
 home: true 
 heroImage: /hero.png
-heroText: [NAME]
-tagline: [DESCRIPTION]
+heroText: <%-NAME>
+tagline: <%-DESCRIPTION>
 actionText: Get Started →
 actionLink: /getting-started
 features:

@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import SveltePlugin from './[NAME]-react.js'
+import SveltePlugin from './<%-NAME>-react.js'
 function App() {
   const handleClick = () => alert('alert from react')
   return (
