@@ -51,7 +51,7 @@
     "react:build": "rollup -c ./adapter/rollup.react.js",
     "react:dev": "rollup -c ./adapter/rollup.react.js -w",
     "react:serve": "cd ./demo/react-demo ; npm start & cd ../../",
-    "react:aliases": "ln -f public/<%-NAME>-react.js ./demo/react-demo/src/<%-NAME>-react.js",
+    "react:aliases": "ln -f public/<%-NAME>-react.js ./demo/react-demo/src/<%-NAME>-react.js; ln -f public/<%-NAME>.css ./demo/react-demo/src/<%-NAME>.css",
     "react": "npm-run-all react:build -p react:dev react:aliases react:serve",
     "iife:build": "rollup -c ./adapter/rollup.iife.js",
     "iife:dev": "rollup -c ./adapter/rollup.iife.js -w",
