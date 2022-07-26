@@ -1,9 +1,10 @@
 import svelte from 'rollup-plugin-svelte'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
+import rollup_start_dev from '../rollup_start_dev'
 import banner from 'rollup-plugin-banner'
-// eslint-disable-next-line no-unused-vars
 import pkg from '../package.json'
 import sveltePreprocess from 'svelte-preprocess'
 const preprocess = sveltePreprocess({
@@ -12,17 +13,16 @@ const preprocess = sveltePreprocess({
   },
   postcss: {
     plugins: [require('autoprefixer')],
-  }
+  },
 })
 const production = !process.env.ROLLUP_WATCH
-export default {
-  input: 'adapter/plugin-vue.js',
+export default { input: 'adapter/main.js',
   output: {
     sourcemap: true,
-    format: 'es',
+    format: 'iife',
     extend: true,
     name: pkg.name,
-    file: `dist/pwt-datepicker-vue.js`,
+    file: `dist/pwt-datepicker.js`,
   },
   plugins: [
     svelte({
@@ -38,6 +38,8 @@ export default {
         importee === 'svelte' || importee.startsWith('svelte/'),
     }),
     commonjs(),
+    !production && rollup_start_dev,
+    !production && livereload('dist'),
     production && terser(),
     banner(`
 <%= pkg.name %>

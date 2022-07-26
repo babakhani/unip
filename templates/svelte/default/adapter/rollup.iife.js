@@ -21,15 +21,15 @@ export default {
     sourcemap: false,
     format: 'iife',
     extend: true,
-    name: '<%-NAME_SANITIZED>',
-    file: `public/<%-NAME>-iife.js`,
+    name: 'persianDatepicker',
+    file: `dist/pwt-datepicker-iife.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`public/<%-NAME>.css`)
+        css.write(`dist/pwt-datepicker.css`)
       },
     }),
     resolve({
@@ -48,6 +48,9 @@ license <%= pkg.license %>
     `),
   ],
   watch: {
+    chokidar: {
+      usePolling: true
+    },
     clearScreen: false,
   },
 }

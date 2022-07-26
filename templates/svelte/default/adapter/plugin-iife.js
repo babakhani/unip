@@ -1,8 +1,13 @@
-import App from '../src/app.svelte'
+import App from '../src/App.svelte'
 const Plugin = function(container, config) {
+  let softContainer = container
+  if (container.tagName === 'INPUT') {
+    softContainer = document.body;
+  }
   return new App({
-    target: container,
+    target: softContainer,
     props: {
+      originalContainer: container,
       options: config,
     },
   })

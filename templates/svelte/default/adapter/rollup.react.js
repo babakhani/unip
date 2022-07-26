@@ -23,14 +23,14 @@ export default {
     format: 'esm',
     extend: true,
     name: pkg.name,
-    file: `public/<%-NAME>-react.js`,
+    file: `dist/pwt-datepicker-react.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`public/<%-NAME>.css`)
+        css.write(`dist/pwt-datepicker.css`)
       },
     }),
     resolve({
@@ -50,6 +50,9 @@ license <%= pkg.license %>
     cleanup(),
   ],
   watch: {
+    chokidar: {
+      usePolling: true
+    },
     clearScreen: false,
   },
 }
