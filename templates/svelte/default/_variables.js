@@ -55,10 +55,10 @@ module.exports = [
   },
   {
     name: 'repository',
-    default: '',
+    default: 'git@github.com:babakhani/unip.git',
   },
   {
     name: 'home',
-    default: '',
+    default: 'https://github.com/babakhani/unip',
   },
 ]

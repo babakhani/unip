@@ -33,7 +33,9 @@ module.exports = (args, options, logger) => {
   }
   logger.info('Please fill the following values…')
   prompt.start().get(variables, (err, result) => {
-    shell.ls('-Rl', '.').forEach(entry => {
+    logger.info(`replace name in ${localPath}/`)
+    shell.ls('-Rl', `${localPath}/`).forEach(entry => {
+      logger.info(`checked file in ${entry}/`)
       if (entry.isFile()) {
         variables.forEach(variable => {
           var pattern = new RegExp(`<%-${variable.name.toUpperCase()}>`, 'ig')
