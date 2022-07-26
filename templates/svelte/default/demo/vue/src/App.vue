@@ -14,9 +14,9 @@
   </div>
 </template>
 <script>
-import SveltePlugin from '../../../public/<%-NAME>-vue.js'
+import SveltePlugin from '../../../dist/<%-NAME>-vue.js'
 // eslint-disable-next-line no-unused-vars
-import styles from '../../../public/<%-NAME>.css'
+import styles from '../../../dist/<%-NAME>.css'
 export default {
   name: 'App',
   components: { SveltePlugin },

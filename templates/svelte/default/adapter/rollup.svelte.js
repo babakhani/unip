@@ -18,18 +18,18 @@ const preprocess = sveltePreprocess({
 const production = !process.env.ROLLUP_WATCH
 export default { input: 'adapter/main.js',
   output: {
-    sourcemap: true,
+    sourcemap: false,
     format: 'iife',
     extend: true,
     name: pkg.name,
-    file: `dist/pwt-datepicker.js`,
+    file: `dist/<%-NAME>-svelte.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`dist/pwt-datepicker.css`)
+        css.write(`<%-NAME>.css`)
       },
     }),
     resolve({

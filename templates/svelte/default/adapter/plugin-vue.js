@@ -1,18 +1,5 @@
 import SvelteApp from '../src/App.svelte'
 export default{
-  render() {
-    return h('div', {
-      class: 'pwt-datepicker-container',
-      ref: "container",
-    }, 
-      [
-        (this.$attrs.options && this.$attrs.options.inline) | this.$attrs.inline ? '' : h('input', { 
-          ref: "inputElement" ,
-          props: { value : this.modelValue}
-        })
-      ]
-    )
-  },
   data() {
     return {
       comp: null

@@ -18,18 +18,18 @@ const production = !process.env.ROLLUP_WATCH
 export default {
   input: 'adapter/plugin-vue2.js',
   output: {
-    sourcemap: true,
+    sourcemap: false,
     format: 'es',
     extend: true,
     name: pkg.name,
-    file: `dist/pwt-datepicker-vue2.js`,
+    file: `dist/<%-NAME>-vue2.js`,
   },
   plugins: [
     svelte({
       dev: !production,
       preprocess,
       css: css => {
-        css.write(`dist/pwt-datepicker.css`)
+        css.write(`<%-NAME>.css`)
       },
     }),
     resolve({

@@ -11,7 +11,7 @@ module.exports = [
     name: 'name',
     description:
       'This name will be use in package name, and JavaScript plugin name',
-    default: 'awesome-unip',
+    default: 'awesomeunip',
   },
   {
     name: 'version',
@@ -43,7 +43,7 @@ module.exports = [
   },
   {
     name: 'react_port',
-    default: '8003',
+    default: '8004',
   },
   {
     name: 'email',

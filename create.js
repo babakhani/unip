@@ -53,11 +53,15 @@ module.exports = (args, options, logger) => {
         })
       }
     })
+
     logger.info('Init git')
+
     shell.exec('git init')
     shell.exec('git add .')
     shell.exec('git commit -m "init"')
+
     logger.info('Install Packages (npm install)')
+
     shell.exec('npm install --verbose', function() {
       logger.info('Install React Packages (npm install)')
       logger.info('All Package Installed Success!')

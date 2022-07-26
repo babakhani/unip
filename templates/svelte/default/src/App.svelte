@@ -14,7 +14,7 @@
     <input type="range" min="0" max="1000" bind:value="{$countable}" />
     <div class="spacer"></div>
     <div class="section">
-      <button on:mouseover="{onSampleEventOver}" on:click="{onSampleEvent}">
+      <button on:focus="{onSampleEventOver}" on:click="{onSampleEvent}">
         Event Example
       </button>
     </div>
@@ -65,35 +65,32 @@
 </script>
 
 <style lang="scss">
-  @import './theme.scss';
-  .plugvelte-container {
-    color: $primarycolor;
-    .center {
-      text-align: center;
-    }
-    .spacer {
-      display: block;
-      width: 100%;
-      height: 20px;
-    }
-    .container {
-      width: 450px;
-      margin: auto;
-      border-radius: 8px;
-      padding: 2rem;
-      background: #f1f1f1;
-    }
+	@import './theme.scss';
+	.plugvelte-container {
+		color: $primarycolor;
+		.spacer {
+			display: block;
+			width: 100%;
+			height: 20px;
+		}
+		.container {
+			width: 450px;
+			margin: auto;
+			border-radius: 8px;
+			padding: 2rem;
+			background: #f1f1f1;
+		}
 
-    h3,
-    h2 {
-      margin-bottom: 10px;
-      margin-top: 0;
-      padding-top: 0;
-    }
+		h3,
+		h2 {
+			margin-bottom: 10px;
+			margin-top: 0;
+			padding-top: 0;
+		}
 
-    h3 {
-      border-bottom: 1px solid #e9e9e9;
-      padding-bottom: 20px;
-    }
-  }
+		h3 {
+			border-bottom: 1px solid #e9e9e9;
+			padding-bottom: 20px;
+		}
+	}
 </style>
