@@ -1,6 +1,4 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
 import SveltePlugin from './<%-NAME>-react.js'
 import Styles from './<%-NAME>.css'
 function App() {

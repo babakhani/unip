@@ -1,13 +1,12 @@
 {
   "name": "unip",
-  "version": "0.0.1-alpha-8",
+  "version": "0.0.1-alpha-9",
   "license": "MIT",
-  "mian": "index.js",
   "author": "Reza Babakhani <babakhani.reza@gmail.com>",
-  "description": "Universal plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, Vue.js and React",
+  "description": "Plugin boilerplate with svelte, create plugin/component for use in pure JavaScript, Vue.js and React",
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/cli.git"
+    "url": "https://github.com/babakhani/unip"
   },
   "homepage": "https://github.com/babakhani/unip",
   "contributors": [
@@ -33,6 +32,14 @@
   "bin": {
     "unip": "index.js"
   },
+  "scripts": {
+    "lint": "npm run eslint",
+    "lint:fix": "npm run prettier:fix; npm run eslint:fix",
+    "eslint": "eslint **/*.{js,vue,svelte}",
+    "eslint:fix": "eslint **/*.{js,vue,svelte} --fix",
+    "prettier": "prettier **/*.{js,vue,svelte} --list-different",
+    "prettier:fix": "prettier -c .prettierrc **/*.{js,vue,svelte} --write"
+  },
   "dependencies": {
     "caporal": "^1.4.0",
     "colors": "^1.4.0",
@@ -49,17 +56,7 @@
     "eslint-plugin-spellcheck": "0.0.19",
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.1",
-    "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.7.0",
-    "svelte": "^3.49.0"
-  },
-  "scripts": {
-    "lint": "npm run eslint",
-    "lint:fix": "npm run prettier:fix; npm run eslint:fix",
-    "eslint": "eslint **/*.{js,vue,svelte}",
-    "eslint:fix": "eslint **/*.{js,vue,svelte} --fix",
-    "prettier": "prettier **/*.{js,vue,svelte} --list-different",
-    "prettier:fix": "prettier -c .prettierrc **/*.{js,vue,svelte} --write"
+    "prettier": "^2.7.1"
   },
   "husky": {
     "hooks": {

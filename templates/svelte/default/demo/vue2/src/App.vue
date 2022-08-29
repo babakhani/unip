@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./logo.png"
-    />
     <SveltePlugin
       :options="{
         sampleConfig: 'passed from vue js',
@@ -14,7 +10,7 @@
   </div>
 </template>
 <script>
-import SveltePlugin from '../../../dist/<%-NAME>-vue.js'
+import SveltePlugin from '../../../dist/<%-NAME>-vue2.js'
 // eslint-disable-next-line no-unused-vars
 import styles from '../../../dist/<%-NAME>.css'
 export default {

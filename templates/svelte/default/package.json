@@ -6,6 +6,53 @@
   "author": "<%-AUTHOR>",
   "homepage": "<%-HOME>",
   "repository": "<%-REPOSITORY>",
+  "scripts": {
+    "dev": "rollup -c ./adapter/rollup.svelte.js  -w",
+    "build": "npm run lint; npm-run-all -p svelte:build vue2:build vue:build react:build iife:build",
+    "start:dev": "sirv dist --single --dev --port 8000",
+
+    "svelte:build": "rollup -c ./adapter/rollup.svelte.js",
+    "iife:build": "rollup -c ./adapter/rollup.iife.js",
+    "vue2:build": "rollup -c ./adapter/rollup.vue2.js",
+    "vue:build": "rollup -c ./adapter/rollup.vue.js",
+    "react:build": "rollup -c ./adapter/rollup.react.js",
+
+    "vue2:install": "cd ./demo/vue2; npm install; cd ../../",
+    "vue:install": "cd ./demo/vue; npm install; cd ../../",
+    "react:install": "cd ./demo/react-demo; npm install; cd ../../",
+
+    "iife:aliases": "ln -f dist/<%-NAME>-iife.js ./demo/iife/<%-NAME>-iife.js ; ln -f dist/<%-NAME>.css ./demo/iife/<%-NAME>.css",
+    "react:aliases": "ln -f dist/<%-NAME>-react.js ./demo/react-demo/src/<%-NAME>-react.js; ln -f dist/<%-NAME>.css ./demo/react-demo/src/<%-NAME>.css",
+
+    "iife:dev": "rollup -c ./adapter/rollup.iife.js -w",
+    "vue2:dev": "rollup -c ./adapter/rollup.vue2.js -w",
+    "vue:dev": "rollup -c ./adapter/rollup.vue.js -w",
+    "react:dev": "rollup -c ./adapter/rollup.react.js -w",
+
+    "iife:serve": "sirv ./demo/iife --single --dev --port 8001",
+    "vue2:serve": "cd ./demo/vue2; npm run serve; cd ../../",
+    "vue:serve": "cd ./demo/vue; npm run dev;",
+    "react:serve": "cd ./demo/react-demo ; npm start & cd ../../",
+
+    "iife": "npm-run-all iife:build -p iife:dev iife:aliases iife:serve",
+    "vue2": "npm-run-all -p vue2:serve vue2:dev",
+    "vue": "npm-run-all -p vue:serve vue:dev",
+    "react": "npm-run-all react:build -p react:dev react:aliases react:serve",
+
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+
+    "prettier": "prettier **/*.{js,vue,svelte} --list-different",
+    "prettier:fix": "prettier **/*.{js,vue,svelte} --write",
+    "lint": "npm run lint:eslint; npm run lint:style",
+    "lint:eslint": "eslint -c .eslintrc.js ./src/**.js ./src/**.svelte",
+    "lint:style": "stylelint **/*.{css,html,js,md,mjs,svelte,ts}",
+
+    "cypress": "cypress open --config-file ./cypress.json",
+    "tests": "cypress run --config-file ./cypress.json",
+
+    "clear": "kill-port --port 8000,8001,8002,8003,8004"
+  },
   "devDependencies": {
     "cypress": "^10.3.1",
     "@commitlint/cli": "^17.0.3",
@@ -44,47 +91,8 @@
     "sirv-cli": "^2.0.2",
     "stylelint": "^14.9.1",
     "svelte": "^3.49.0",
-    "svelte-adapter": "https://github.com/babakhani/svelte-adapter",
     "svelte-preprocess": "^4.10.7",
     "vuepress": "^1.9.7"
-  },
-  "scripts": {
-    "clear": "kill-port --port 8000,8001,8002,8003,8004",
-    "svelte:build": "rollup -c ./adapter/rollup.svelte.js",
-    "build": "npm run lint; npm-run-all -p svelte:build vue:build react:build iife:build",
-    "dev": "rollup -c ./adapter/rollup.svelte.js  -w",
-    "vue:install": "cd ./demo/vue; npm install; cd ../../",
-    "vue:build": "rollup -c ./adapter/rollup.vue.js",
-    "vue:dev": "rollup -c ./adapter/rollup.vue.js -w",
-    "vue:serve": "cd ./demo/vue; npm run dev;",
-    "vue": "npm-run-all -p vue:serve vue:dev",
-    "vue2:install": "cd ./demo/vue2; npm install; cd ../../",
-    "vue2:build": "rollup -c ./adapter/rollup.vue2.js",
-    "vue2:dev": "rollup -c ./adapter/rollup.vue2.js -w",
-    "vue2:serve": "cd ./demo/vue2; npm run serve; cd ../../",
-    "vue2": "npm-run-all -p vue2:serve vue2:dev",
-    "react:install": "cd ./demo/react-demo; npm install; cd ../../",
-    "react:build": "rollup -c ./adapter/rollup.react.js",
-    "react:dev": "rollup -c ./adapter/rollup.react.js -w",
-    "react:serve": "cd ./demo/react-demo ; npm start & cd ../../",
-    "react:aliases": "ln -f dist/<%-NAME>-react.js ./demo/react-demo/src/<%-NAME>-react.js; ln -f dist/<%-NAME>.css ./demo/react-demo/src/<%-NAME>.css",
-    "react": "npm-run-all react:build -p react:dev react:aliases react:serve",
-    "iife:build": "rollup -c ./adapter/rollup.iife.js",
-    "iife:dev": "rollup -c ./adapter/rollup.iife.js -w",
-    "iife:serve": "sirv ./demo/js --single --dev --port 8001",
-    "iife:aliases": "ln -f dist/<%-NAME>-iife.js ./demo/js/<%-NAME>-iife.js ; ln -f dist/<%-NAME>.css ./demo/js/<%-NAME>.css",
-    "iife": "npm-run-all iife:build -p iife:dev iife:aliases iife:serve",
-    "start": "sirv dist --single --port 8000",
-    "start:dev": "sirv dist --single --dev --port 8000",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "prettier": "prettier **/*.{js,vue,svelte} --list-different",
-    "prettier:fix": "prettier **/*.{js,vue,svelte} --write",
-    "lint": "npm run lint:eslint; npm run lint:style",
-    "lint:eslint": "eslint -c .eslintrc.js ./src/**.js ./src/**.svelte",
-    "lint:style": "stylelint **/*.{css,html,js,md,mjs,svelte,ts}",
-    "cypress": "cypress open --config-file ./cypress.json",
-    "tests": "cypress run --config-file ./cypress.json"
   },
   "husky": {
     "hooks": {
@@ -100,11 +108,5 @@
     "svelteSortOrder": "markup-scripts-styles",
     "svelteStrictMode": true,
     "singleQuote": true
-  },
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "persian-date": "^1.1.0",
-    "svelte-swipe": "^1.8.2",
-    "swiper": "^8.3.2"
   }
 }

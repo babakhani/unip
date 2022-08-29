@@ -19,12 +19,8 @@ export default{
   },
   mounted() {
     let props = this.$attrs
-    let mainElement = this.$refs.inputElement
-    let container = document.body
-    if (this.$attrs.options && this.$attrs.options.inline || this.$attrs.inline) {
-      mainElement = this.$refs.container
-      container = this.$refs.container
-    }
+    let mainElement = this.$refs.container
+    let container = this.$refs.container
     if (this.$attrs.options) {
       props = {
         ...this.$attrs,
@@ -45,6 +41,7 @@ export default{
       }
       container = this.$refs.container
     }
+
     props.model = this.modelValue
     this.comp = new SvelteApp({
       target: container,

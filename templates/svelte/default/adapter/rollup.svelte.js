@@ -3,10 +3,12 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
-import rollup_start_dev from '../rollup_start_dev'
 import banner from 'rollup-plugin-banner'
-import pkg from '../package.json'
 import sveltePreprocess from 'svelte-preprocess'
+
+import rollup_start_dev from './rollup_start_dev'
+import pkg from '../package.json'
+
 const preprocess = sveltePreprocess({
   scss: {
     includePaths: ['src'],
@@ -15,8 +17,11 @@ const preprocess = sveltePreprocess({
     plugins: [require('autoprefixer')],
   },
 })
+
 const production = !process.env.ROLLUP_WATCH
-export default { input: 'adapter/main.js',
+
+export default { 
+  input: 'adapter/main.js',
   output: {
     sourcemap: false,
     format: 'iife',

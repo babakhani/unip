@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%-NAME_SANITIZED></title>
+</head>
+<body>
+  <h1> <%-NAME_SANITIZED> Pure Svelte </h1>
+  <div id="container"></div>
+
+  <link rel="stylesheet" href="<%-NAME_SANITIZED>.css">
+  <script type="text/javascript" src="./<%-NAME_SANITIZED>-svelte.js" ></script>
+
+  <script>
+    var container = document.getElementById('container')
+    <%-NAME_SANITIZED>(container)
+  </script>
+</body>
+</html>
+

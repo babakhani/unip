@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./logo.png"
-    />
     <SveltePlugin
       :options="{
         sampleConfig: 'passed from vue js',
@@ -30,14 +26,3 @@ export default {
   },
 }
 </script>
-
-<style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
-

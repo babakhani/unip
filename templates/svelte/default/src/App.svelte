@@ -22,7 +22,7 @@
 </div>
 
 <script>
-  import { createEventDispatcher, onDestroy } from 'svelte'
+  import { createEventDispatcher } from 'svelte'
   import Options from './options.js'
   import { time, elapsed, countable } from './stores.js'
 

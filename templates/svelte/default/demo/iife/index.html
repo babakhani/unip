@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%-NAME></title>
+</head>
+<body>
+  <h1> <%-NAME_SANITIZED> Pure javascript (IIFE) usage example </h1>
+  <div id="container" />
+
+  <link rel="stylesheet" href="<%-NAME>.css">
+  <script type="text/javascript" src="./<%-NAME>-iife.js" ></script>
+
+  <script>
+    var container = document.getElementById('container')
+    var options = {
+      sampleConfig: 'Overwrite by plugin user',
+      onSampleEvent: function (args) {
+        console.log('onSampleEvent passed from applicaiton')
+      }
+    }
+    <%-NAME_SANITIZED>(container, options)
+  </script>
+</body>
+</html>

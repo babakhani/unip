@@ -3,7 +3,7 @@
     <img width="180" src="https://raw.githubusercontent.com/babakhani/unip/master/logo.png" alt="UNIP">
   </a>
 </p>
-<h4 align="center">Universal plugin scaffold</h4>
+<h4 align="center">Plugin scaffold</h4>
 
 <p align="center" >
 <a href="https://badge.fury.io/js/unip"><img src="https://badge.fury.io/js/unip.svg" alt="npm version" height="18"></a>
@@ -12,20 +12,18 @@
 UNIP
 ==================
 
-Create universal plugin with single code base for pure JavaScript, Svelte, Vue.js and React
-
+Create Components with single code base for pure JavaScript, Svelte, Vue.js and React
 
 ### What's Unip?
 
-Unip help you start new plugin project that going to work in different
+Unip help you start new plugin project that will going to work in different
 JavaScript framework, currently we support Vue.js, React, pure JavaScript (IIFE) and also Svelte.
 
 ## Features
 - Use svelte power to create plugin that going to work every where
 - Example for every thing you need to create your plugin
 - Pre defined Vue.js React adapter
-- vuepress static site generated for documentation
-- CI/CD with Travis
+- VuePress static site generated for documentation
 
 ## Install
 
@@ -83,14 +81,7 @@ npm run install-react-demo
 npm run react 
 ```
 
-#### Kill node process on demo ports
-
-```
-npm run clear 
-```
-
 ## Contribute
-
 
 ```
 git clone git@github.com:babakhani/unip.git
